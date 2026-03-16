@@ -230,7 +230,7 @@ Future<List<Div>> deviceShows() async {
           properties: "p-2",
           children: [
             Hyperlink(
-              href: "/${device.deviceVendor.toLowerCase()}-${device.deviceName}/",
+              href: "${device.deviceVendor.toLowerCase()}-${device.deviceName}/",
               children: [
                 Div(
                   properties: "grid place-content-center",
