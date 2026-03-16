@@ -19,15 +19,14 @@ jobs:
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
-
-      - name: Get Dart Dependencies
-        run: dart pub get
+        
+      - name: Get Dart Dependencies and Create Style Folder
+        run: mkdir -p build/output/style && dart pub get
 
       - name: Build Site
         run: |
           npx tailwindcss init -p || true
-          dart run master.dart build & sleep 120 && kill $! || true
-          cat build_log.txt
+          dart run master.dart build & sleep 120 && kill $(jobs -p) || true
           ls -R build/output
 
       - name: Deploy
