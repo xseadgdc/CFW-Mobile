@@ -21,12 +21,13 @@ jobs:
         run: |
           rm -rf ./output ./build
           echo "@tailwind base; @tailwind components; @tailwind utilities;" > ./input.css
-          npm install tailwindcss@3.4.1 @tailwindcss/typography@0.5.10
+          npm install -g tailwindcss@3.4.1 @tailwindcss/typography@0.5.10
+          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
           dart pub get
           dart run master.dart build &
           timeout=120
           while [ ! -f ./output/index.html ] && [ $timeout -gt 0 ]; do
-            echo "Waiting for index.html... ($timeout seconds remaining)"
+            echo "Waiting for index.html... ($timeout seconds left)"
             sleep 5
             ((timeout-=5))
           done
