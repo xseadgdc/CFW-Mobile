@@ -25,16 +25,13 @@ jobs:
 
       - name: Build Site
         run: |
-          dart run master.dart build & sleep 60 && kill $! || true
-          cp -r build/*.* build/output/ || true 
-          cp build/input.css build/output/style.css || true
-          ls build/output
+          npx tailwindcss init -p || true
+          dart run master.dart build & sleep 120 && kill $! || true
+          cat build_log.txt
+          ls -R build/output
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/output
-
-      - name: Check Output
-        run: ls -R && echo "The deployment completed successfully."
