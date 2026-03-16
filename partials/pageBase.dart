@@ -60,11 +60,11 @@ class PageBase {
           ),
           Link(
             rel: "stylesheet",
-            href: "/style/tailwind.css",
+            href: "style/tailwind.css",
           ),
           Link(
             rel: "icon",
-            href: "/logo.png"
+            href: "logo.png"
           ),
           CustomComponent(html: """<script type="text/javascript">
 var infolinks_pid = 3409399;
@@ -95,12 +95,12 @@ var infolinks_wsid = 0;
             properties: "container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative",
             children: [
               Hyperlink(
-                href: "/",
+                href: "https://xseadgdc.github.io/CFW-Mobile/",
                 properties: "capitalize font-extrabold text-2xl",
                 children: [
                   Image(
-                    src: "/banner.webp",
-                    alt: "Customrombay.org",
+                    src: "banner.webp",
+                    alt: "Website Under Construction",
                     properties: "h-8 max-w-full"
                   )
                 ]
@@ -130,7 +130,7 @@ var infolinks_wsid = 0;
                     properties: "grid place-items-center my-2",
                     children: [
                       Hyperlink(
-                        href: "/posts",
+                        href: "posts",
                         text: "Posts"
                       )
                     ]
@@ -139,7 +139,7 @@ var infolinks_wsid = 0;
                     properties: "grid place-items-center my-2",
                     children: [
                       Hyperlink(
-                        href: "/contributing",
+                        href: "contributing",
                         text: "Contributing"
                       )
                     ]
@@ -148,7 +148,16 @@ var infolinks_wsid = 0;
                     properties: "grid place-items-center my-2",
                     children: [
                       Hyperlink(
-                        href: "/about",
+                        href: "conduct",
+                        text: "Code of Conduct"
+                      )
+                    ]
+                  ),
+                  ListItem(
+                    properties: "grid place-items-center my-2",
+                    children: [
+                      Hyperlink(
+                        href: "about",
                         text: "About"
                       )
                     ]
@@ -201,7 +210,7 @@ var infolinks_wsid = 0;
             children: [
               Paragraph(
                 properties: "text-sm font-light",
-                text: """Copyright © 2022-${DateTime.now().year} - ${Hyperlink(href: "https://github.com/PiotrZPL", text:"Piotr Lange").toHTML()} - All rights reserved"""
+                text: """Copyright © 2022-${DateTime.now().year} - ${Hyperlink(href: "https://github.com/PiotrZPL", text:"Piotr Lange").toHTML()} and ${Hyperlink(href: "https://github.com/xseadgdc", text:"Daniel the Big D (xseagdc)").toHTML()}- All rights reserved"""
               ),
               Paragraph(
                 properties: "text-sm font-light",
@@ -278,7 +287,7 @@ var infolinks_wsid = 0;
           ),
 
           Script(
-            src: "/scripts.min.js"
+            src: "scripts.min.js"
           ),
           Script(
             script: """const mobileMenuButton = document.querySelector('.mobile-menu-button')
