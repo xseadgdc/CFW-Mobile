@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Customrombay.org - GSI custom ROMs - what to do if my device does not have custom ROM support?</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S2SPCWG41N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S2SPCWG41N');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description">
+<link href="style/tailwind.css" rel="stylesheet">
+<link href="logo.png" rel="icon">
+<script type="text/javascript">
+var infolinks_pid = 3409399;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+<meta property="og:title" content="GSI custom ROMs - what to do if my device does not have custom ROM support?">
+<meta property="og:image" content="https://customrombay.org/post-images/gsi_roms_1.webp">
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen" onresize="onWindowResize();">
+<script>    var darkStorage = localStorage.getItem('darkmode');
+    var isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (!darkStorage && isBrowserDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('darkmode', 'dark')
+    }
+    if (darkStorage && darkStorage === 'dark') {
+      document.documentElement.classList.add('dark')
+    }</script>
+<header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+<a href="https://xseadgdc.github.io/CFW-Mobile/" class="capitalize font-extrabold text-2xl">
+<img class="h-8 max-w-full" alt="Website Under Construction" src="banner.webp"></a>
+<button class="block relative h-auto mobile-menu-button md:hidden" aria-label="Mobile menu button">
+<div class="m-auto h-0.5 w-6 rounded dark:bg-gray-100 bg-gray-900 transition duration-300" id="line">
+</div>
+<div class="m-auto mt-2 h-0.5 w-6 rounded dark:bg-gray-100 bg-gray-900 transition duration-300" id="line2">
+</div>
+<div class="m-auto mt-2 h-0.5 w-6 rounded dark:bg-gray-100 bg-gray-900 transition duration-300" id="line3">
+</div></button>
+<ul class="mobile-menu h-0 md:h-auto overflow-hidden px-6 md:pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative md:flex md:flex-row flex-col items-center md:items-center gap-6 md:gap-6 bg-gray-100 dark:bg-gray-800 transition-all ease-in duration-300">
+<li class="grid place-items-center my-2">
+<a href="posts">Posts</a>
+</li>
+<li class="grid place-items-center my-2">
+<a href="contributing">Contributing</a>
+</li>
+<li class="grid place-items-center my-2">
+<a href="conduct">Code of Conduct</a>
+</li>
+<li class="grid place-items-center my-2">
+<a href="about">About</a>
+</li>
+<li class="grid place-items-center my-2">
+<span class="open-search inline-block cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="10" cy="10" r="7" />
+            <line x1="21" y1="21" x2="15" y2="15" />
+          </svg></span>
+</li>
+<li class="grid place-items-center my-2">
+<span class="toggle-dark-mode inline-block cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="3" />
+            <line x1="12" y1="5" x2="12" y2="5.01" />
+            <line x1="17" y1="7" x2="17" y2="7.01" />
+            <line x1="19" y1="12" x2="19" y2="12.01" />
+            <line x1="17" y1="17" x2="17" y2="17.01" />
+            <line x1="12" y1="19" x2="12" y2="19.01" />
+            <line x1="7" y1="17" x2="7" y2="17.01" />
+            <line x1="5" y1="12" x2="5" y2="12.01" />
+            <line x1="7" y1="7" x2="7" y2="7.01" />
+          </svg></span>
+</li>
+</ul>
+</header>
+<main class="flex-1">
+<article class="prose lg:prose-xl mx-auto my-8 dark:prose-dark px-4">
+<div><h1 id="gsi-custom-roms---what-to-do-if-my-device-does-not-have-custom-rom-support">GSI custom ROMs - what to do if my device does not have custom ROM support?</h1>
+<p><img src="/post-images/gsi_roms_1.webp" alt="GSI ROMs banner" />
+Traditionally, custom ROMs are compiled from source code with only one specific device in mind. Sometimes, builds are released for a group of devices with very similar hardware, usually the same processor (see <a href="https://customrombay.org/xiaomi-Mi439/">Mi439</a> as an example). This approach has many benefits. If you install a &quot;conventional&quot; custom ROM from a reputable source, you can be sure that the OS will boot, all or most of the phone's hardware will work, and that the build will be optimized for your device. However, this approach requires enormous amounts of time and work from the developers, who are usually unpaid volunteers. Because of that, not every device is supported by every custom ROM, and some devices aren't supported by any custom ROM at all! So what to do if there aren't any custom ROMs for your device? Or if your device is not supported by your favorite ROM? Consider trying GSI ROMs.</p>
+<h2 id="what-are-gsi-custom-roms">What are GSI custom ROMs?</h2>
+<p>GSI stands for Generic System Image and was introduced by Google in 2017 with the launch of <a href="https://android-developers.googleblog.com/2017/05/here-comes-treble-modular-base-for.html">Project Treble</a>. Its main goal was to address the issue of OEMs (Original Equipment Manufacturers) being slow and inefficient in rolling out Android updates to their devices. To do that, Android developers introduced the separation of low-level and hardware-specific code from the rest of the OS. This modularization of system images significantly decreased the amount of work required from the OEMs to port new Android versions to their devices. However, it also ended up being a game-changer for the modding community. Developers can now create custom ROMs in the form of GSIs, which can be installed on most Android smartphones.</p>
+<h2 id="can-i-run-a-gsi-rom-on-my-device">Can I run a GSI ROM on my device?</h2>
+<p>In most cases, the answer to this question is <em>yes</em>. The two requirements for a device to be able to use a GSI custom ROM are:</p>
+<ul>
+<li>unlocked bootloader,</li>
+<li>Project Treble compatibility.</li>
+</ul>
+<p>When it comes to bootloader unlocking, in most cases the matter is rather straightforward - either your device's OEM allows it or not. You can check it by with quick Google search. However, determining Treble-compatibility is not so trivial. Most devices released with Android 8.0 Oreo or newer are compatible but it's better to be careful with this assumption. To make sure your device is supported as well as to obtain more useful information regarding GSI ROMs for your device, install the <a href="https://gitlab.com/TrebleInfo/TrebleInfo">Treble Info app</a>. You can download it either from the <a href="https://play.google.com/store/apps/details?id=tk.hack5.treblecheck">Play Store</a>, <a href="https://f-droid.org/en/packages/tk.hack5.treblecheck/">F-Droid</a>, or <a href="https://gitlab.com/TrebleInfo/TrebleInfo/-/releases">the developer's GitLab page</a>.</p>
+<p>All that said, the fact that GSI ROMs can boot on your device does not mean that they will work well. The most common issues you may encounter when using a GSI custom ROM include:</p>
+<ul>
+<li>broken Wi-Fi, Bluetooth, or mobile data support,</li>
+<li>lack of VoLTE (mostly Samsung devices),</li>
+<li>issues with reading SIM and eSIM cards,</li>
+<li>broken NFC support,</li>
+<li>broken IR blaster support,</li>
+<li>broken fingerprint scanner support,</li>
+<li>SD card slot not being functional,</li>
+<li>some or all cameras not being recognized,</li>
+<li>incorrect notch/punch hole detection.</li>
+</ul>
+<p>Of course, it is highly unlikely that all of them will be present on your device. Most phones can run GSI ROMs completely fine. Generally, the above issues tend to affect Mediatek-powered devices more frequently than Qualcomm-powered ones. Moreover, hardware support for the newest devices tends to be worse than for those released 2 or more years ago. Some issues present in GSI custom ROMs can be mitigated using Magisk modules. <strong>In rare cases, software issues might physically break your hardware and hard- or soft-brick your device. You have been warned.</strong></p>
+<h2 id="which-custom-roms-are-available-as-gsis">Which custom ROMs are available as GSIs?</h2>
+<p>There are many custom ROMs available as GSIs. Some of them include GAPPS (Google apps), and some don't. An actively updated list of GSI ROMs is available <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-(GSI)-list">here</a>. Below is a list of the most popular ones:</p>
+<table>
+<thead>
+<tr>
+<th>GSI ROM</th>
+<th>Status</th>
+<th>Android version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ahnet-69/treble_evo/releases">Evolution X</a></td>
+<td>Unofficial</td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="https://github.com/boydaihungst/treble_build_derpfest/releases">DerpFest</a></td>
+<td>Unofficial</td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ponces/treble_build_aosp/releases">AOSP</a></td>
+<td>Unofficial</td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="https://projectelixiros.com/device/gsi">Project Elixir</a></td>
+<td>Official</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://ancientrom.xyz/download">AncientOS</a></td>
+<td>Official</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://drive.proton.me/urls/JF352AYSS4#YkXliW8T03Cp">LeOS 20</a></td>
+<td>Official</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ChonDoit/treble_superior_patches/releases">Superior OS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/naz664/ArrowOS_gsi/releases">ArrowOS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ChonDoit/treble_cherishos_patches/releases">Cherish OS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/naz664/crDroid_gsi/releases">crDroid</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/naz664/SparkOS_gsi/releases/tag/v2023.10.15">SparkOS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ChonDoit/treble_alphadroid_patches/releases/tag/A13-v20231009">AlphaDroid</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/MisterZtr/RisingOS_gsi/releases">RisingOS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ahnet-69/treble_voltage/releases">VoltageOS</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ponces/treble_build_pe/releases/">Pixel Experience (Plus)</a></td>
+<td>Unofficial</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-install-a-gsi-custom-rom">How to install a GSI custom ROM?</h2>
+<p>The steps necessary to install a GSI custom ROM may vary depending on your device and the ROM you are trying to install. <strong>Always follow a guide provided by the ROM's developer.</strong> Below is a general procedure that will apply to most GSI ROMs and devices. Follow it only if your device is Treble-compatible.</p>
+<ol>
+<li>Back up all your data, <a href="https://wiki.lineageos.org/adb_fastboot_guide">set up adb and fastboot on your PC</a>, unlock your device's bootloader, and charge its battery to at least 50%.</li>
+<li>Check if your device supports dynamic partitions. You can do it by opening the Treble Info app and going to the <em>Details</em> section: <div class="grid place-content-center"><img src="/post-images/gsi_roms_2.webp" alt="Details at Treble Info app"></div> This information will be needed later.</li>
+<li>Download a GSI ROM of your choice. <strong>Choose a build that matches your device's stock Android version or higher to ensure compatibility.</strong> In most cases, it will come packaged as a <em>.img.xz</em> file. Extract it to <em>.img</em>.</li>
+<li>Extract <em>vbmeta.img</em> from your stock ROM. This step is highly device- and vendor-specific so make sure to research this topic. <div class="grid place-content-center"><img src="/post-images/gsi_roms_3.webp" alt="Extracting vbmeta.img from the stock ROM"></div></li>
+<li>Connect your device to a PC. Reboot it to the bootloader. After enabling USB debugging, you can do it by running the following command:
+<pre><code class="language-bash">adb reboot bootloader
+</code></pre>
+or by holding an appropriate configuration of power and volume buttons. If your device supports dynamic partitions, you also need to enter the <em>Fastbootd mode</em> by running:
+<pre><code class="language-bash">fastboot reboot fastboot
+</code></pre>
+You can verify that your device is properly recognized by the PC with the following command:
+<pre><code class="language-bash">fastboot devices
+</code></pre>
+If your device shows up, you can proceed to flash your files.</li>
+<li>Flash <em>vbmeta.img</em>. In most cases you will need to disable AVB (Android Verified Boot) when doing this:
+<pre><code class="language-bash">fastboot --<span class="hljs-built_in">disable</span>-verity --<span class="hljs-built_in">disable</span>-verification flash vbmeta vbmeta.img
+</code></pre>
+</li>
+<li>In most cases you will need to erase the system partition to avoid a bootloop:
+<pre><code class="language-bash">fastboot erase system
+</code></pre>
+</li>
+<li>Flash the system partition:
+<pre><code class="language-bash">fastboot flash system GSI-FILENAME.img
+</code></pre>
+The flashing process might take several minutes to complete.</li>
+<li>Factory reset your device. <strong>This will wipe all data saved on your phone</strong> to avoid problems with the new operating system.
+<pre><code class="language-bash">fastboot -w
+</code></pre>
+</li>
+<li>Reboot to the new GSI ROM:
+<pre><code class="language-bash">fastboot reboot
+</code></pre>
+The first boot may take up to 10 minutes, so you need to be patient.</li>
+</ol>
+<p>If the device boots successfully, you can start exploring all the features and possible bugs of the new operating system. Remember to report any issues to the developer to help in fixing them.</p>
+<h2 id="references-and-further-reading">References and further reading</h2>
+<ol>
+<li>Andy Betts, <a href="https://www.makeuseof.com/how-to-install-gsi-android/">How to Flash a GSI on an Android Device</a></li>
+<li>Arol Wright, <a href="https://www.makeuseof.com/what-is-a-gsi-generic-system-image/">What Is a GSI on Android and How Is It Different to a Custom ROM?</a></li>
+<li>Google, <a href="https://developer.android.com/topic/generic-system-image">Generic System Images (GSIs)</a></li>
+<li>Pierre-Hugues HUSSON and contributors, <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-(GSI)-list">Generic System Image (GSI) list</a></li>
+</ol>
+</div>
+<div>
+<h2>About the author
+</h2>
+<div class="flex flex-col md:flex-row md:space-x-8">
+<div class="grid place-content-center">
+<img class="rounded-full max-w-sm" src="/post-images/piotr_lange_fixed.webp">
+</div>
+<div>
+<h3><a href="https://piotrlange.de/">Piotr Lange</a>
+</h3>
+<p>A young software developer, custom ROM maintainer, LineageOS contributor and FOSS enthusiast. Lead developer at <a href="https://customrombay.org/">customrombay.org</a>. IBDP student from Poland.</p>
+</div>
+</div>
+<p>Did you like this post? <a href="https://www.paypal.me/PiotrZPL/">Support its author via PayPal</a>!</p>
+</div></article></main>
+<footer class="container p-6 mx-auto md:flex justify-between items-center">
+<p class="text-sm font-light">Copyright © 2022-2026 - <a href="https://github.com/PiotrZPL">Piotr Lange</a> and <a href="https://github.com/xseadgdc">Daniel the Big D (xseagdc)</a>- All rights reserved</p>
+<p class="text-sm font-light">Generated on 16.03.2026 using <a href="https://github.com/PiotrZPL/staurolite">Staurolite</a></p>
+</footer>
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+<div class="container max-w-3xl mx-auto p-12">
+<div class="relative">
+<div class="my-4 text-center text-2xl font-bold">
+<p>Search</p>
+</div>
+<span class="p-2 absolute right-0 top-0 cursor-pointer close-search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg></span>
+</div>
+<input class="py-2 px-3 w-full dark:text-black border dark:border-transparent" type="search" placeholder="Enter search query"></input>
+<div class="search-results text-lg font-medium my-4 hidden">
+<p>Results</p>
+</div>
+<ul class="search-list my-2">
+</ul>
+<div class="no-results text-center my-8 hidden">
+<div class="text-xl font-semibold mb-2">
+<p>No results found</p>
+</div>
+<p class="font-light text-sm">Try adjusting your search query</p>
+</div>
+</div>
+</div>
+<script src="scripts.min.js"></script>
+<script>const mobileMenuButton = document.querySelector('.mobile-menu-button')
+    const mobileMenu = document.querySelector('.mobile-menu')
+    function toggleMenu() {
+      mobileMenuButton.querySelector('#line').classList.toggle('rotate-45')
+      mobileMenuButton.querySelector('#line').classList.toggle('translate-y-1.5')
+
+      mobileMenuButton.querySelector('#line3').classList.toggle('-rotate-45')
+      mobileMenuButton.querySelector('#line3').classList.toggle('-translate-y-1')
+
+      mobileMenuButton.querySelector('#line2').classList.toggle('hidden')
+      if (mobileMenu.clientHeight === 0) {
+        mobileMenu.style.paddingTop = '20px'
+        // navbar.style.paddingBottom = '20px'
+        mobileMenu.style.height = `${parseInt(mobileMenu.scrollHeight + 30)}px`
+        return
+        // console.log("1")
+      }
+      mobileMenu.style.height = '0px'
+      mobileMenu.style.paddingTop = '0px'
+    }
+    if(mobileMenu && mobileMenuButton){
+      mobileMenuButton.addEventListener('click', toggleMenu)
+    }</script>
+<script>const darkmode = document.querySelector('.toggle-dark-mode');
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        mobileMenu.classList.toggle("duration-300")
+        mobileMenu.classList.toggle("transition-all")
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('darkmode', 'light')
+        // mobileMenu.classList.toggle("duration-300")
+        // mobileMenu.classList.toggle("transition-all")
+        setTimeout(() => {  mobileMenu.classList.toggle("duration-300"); mobileMenu.classList.toggle("transition-all"); }, 500);
+      } else {
+        mobileMenu.classList.toggle("duration-300")
+        mobileMenu.classList.toggle("transition-all")
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('darkmode', 'dark')
+        // mobileMenu.classList.toggle("duration-300")
+        // mobileMenu.classList.toggle("transition-all")
+        setTimeout(() => {  mobileMenu.classList.toggle("duration-300"); mobileMenu.classList.toggle("transition-all"); }, 500);
+      }
+    }
+    if (darkmode) {
+      darkmode.addEventListener('click', toggleDarkMode);
+    }
+
+    //darkStorage = localStorage.getItem('darkmode');
+    //isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    //if (!darkStorage && isBrowserDark) {
+    //  document.documentElement.classList.add('dark');
+    //}
+
+    //if (darkStorage && darkStorage === 'dark') {
+    //  toggleDarkMode();
+    //}
+    </script>
+<script>function onWindowResize() {
+        mobileMenuButton.querySelector('#line').classList.remove('rotate-45')
+        mobileMenuButton.querySelector('#line').classList.remove('translate-y-1.5')
+
+        mobileMenuButton.querySelector('#line3').classList.remove('-rotate-45')
+        mobileMenuButton.querySelector('#line3').classList.remove('-translate-y-1')
+
+        mobileMenuButton.querySelector('#line2').classList.remove('hidden')
+        mobileMenu.style.height = "";
+        mobileMenu.style.paddingTop = "";
+      }</script>
+</body>
+</html> 
