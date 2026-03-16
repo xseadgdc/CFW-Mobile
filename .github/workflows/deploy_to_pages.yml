@@ -6,10 +6,27 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
-      - run: dart pub get
-      - run: dart run master.dart build 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Tailwind
+        run: npm install -D tailwindcss @tailwindcss/typography
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Get Dart Dependencies
+        run: dart pub get
+
+      - name: Build Site
+        # Runs build in background, waits 30s, then kills it so the job can finish
+        run: dart run master.dart build & sleep 30 && kill $! || true
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
