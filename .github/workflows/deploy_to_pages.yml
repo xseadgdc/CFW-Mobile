@@ -22,9 +22,10 @@ jobs:
           rm -rf ./build/output
           mkdir -p ./build/output/style
           npm install -D tailwindcss @tailwindcss/typography
-          cat /home/runner/.npm/_logs/*.log
+          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
           dart pub get 
-          npx tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
+          tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
+          cat /home/runner/.npm/_logs/*.log
           dart run master.dart build & 
           sleep 120
           kill $(jobs -p) || true
