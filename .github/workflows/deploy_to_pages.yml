@@ -27,6 +27,7 @@ jobs:
         run: |
           dart run master.dart build & sleep 60 && kill $! || true
           cp -r build/*.* build/output/ || true 
+          cp build/input.css build/output/style.css || true
           ls build/output
 
       - name: Deploy
