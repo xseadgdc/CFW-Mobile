@@ -64,7 +64,7 @@ void main() async {
       baseUrl: "https://xseadgdc.github.io/CFW-Mobile/",
     ),
     customConfigPath: "tailwind.config.js",
-    buildIndexJSON: true,
+    buildIndexJSON: false,
     shortenIndexJSONPaths: true,
     buildSiteMap: true,
   );
