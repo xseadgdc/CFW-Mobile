@@ -13,28 +13,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install Tailwind
-        run: |
-          npm install -g tailwindcss @tailwindcss/typography
-          npm install -D tailwindcss @tailwindcss/typography
-
+          
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
         
-      - name: Get Dart Dependencies and Create Style Folder
-        run: mkdir -p build/output/style && dart pub get 
-
-      - name: Build Site
+      - name: Install and Build
         run: |
+          rm -rf ./build/output
           mkdir -p ./build/output/style
+          npm install -D tailwindcss @tailwindcss/typography
+          dart pub get 
           ./node_modules/.bin/tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           dart run master.dart build & 
-          sleep 120 && kill $(jobs -p) || true
-          echo "Checking Project Root:"
-          ls -F
-          echo "Checking build/output:"
-          ls -R build/output || echo "build/output not found"
+          sleep 120
+          kill $(jobs -p) || true
+          if [ ! -f ./build/output/index.html ]; then
+             echo "index.html not found, checking for alternatives..."
+             ls -R ./build/output
+          fi
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
