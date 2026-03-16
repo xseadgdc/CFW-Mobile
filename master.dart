@@ -21,7 +21,7 @@ void main() async {
       listOfHtml: [
         PageBase(
           path: "/index.html",
-          title: "Customrombay.org",
+          title: "CFW Mobile",
           listOfWidgets: [
             Article(
               properties: "mx-auto p-6 text-center",
@@ -29,7 +29,7 @@ void main() async {
                 Heading(
                   level: 1,
                   properties: "text-3xl font-bold lg:text-5xl mx-5 text-center",
-                  text: "Welcome to Customrombay.org!"
+                  text: "Welcome to CFW Mobile!"
                 ),
   //               Style(
   //                 css: """img {
@@ -38,7 +38,7 @@ void main() async {
   //               ),
                 Paragraph(
                   properties: "text-xl lg:text-2xl mt-8 mx-5 text-center",
-                  text: "A place to find all custom ROMs available for your device."
+                  text: "A place to find all custom ROMs, recoveries, and other firmware available for your device."
                 ),
                 Heading(
                   level: 2,
@@ -61,7 +61,7 @@ void main() async {
         PostPage(text: await getPostContent(postName: "play_protect_certification_fix"), title: "This device isn't Play Protect certified - easy fix for Android 14 and older", path: "/posts/play_protect_certification_fix", image: "https://customrombay.org/post-images/play_protect_certification_fix_1.webp").toHtmlDoc(),
         PostPage(text: await getPostContent(postName: "2024_phone_buying_guide"), title: "The Ultimate Guide To Choosing Phones for Custom ROMs [Early 2024 Edition]", path: "/posts/2024_phone_buying_guide", image: "https://customrombay.org/post-images/2024_phone_buying_guide_1.webp").toHtmlDoc(),
       ] + await renderDevicePages(),
-      baseUrl: "https://customrombay.org",
+      baseUrl: "https://xseadgdc.github.io/CFW-Mobile",
     ),
     customConfigPath: "tailwind.config.js",
     buildIndexJSON: true,
@@ -269,6 +269,12 @@ Future<List<Div>> deviceShows() async {
 Future<String> getContributingDetails() async {
   File contributingFile = File("CONTRIBUTING.md");
   String content = await contributingFile.readAsString();
+  return content;
+}
+
+Future<String> getCoCDetails() async {
+  File codeOfConductFile = File("CODE_OF_CONDUCT.md");
+  String content = await codeOfConductFile.readAsString();
   return content;
 }
 
