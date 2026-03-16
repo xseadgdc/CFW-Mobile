@@ -22,6 +22,7 @@ jobs:
           rm -rf ./build/output
           mkdir -p ./build/output/style
           npm install -D tailwindcss @tailwindcss/typography
+          cat /home/runner/.npm/_logs/*.log
           dart pub get 
           npx tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           dart run master.dart build & 
