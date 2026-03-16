@@ -65,7 +65,7 @@ void main() async {
     ),
     customConfigPath: "tailwind.config.js",
     buildIndexJSON: false,
-    shortenIndexJSONPaths: true,
+    shortenIndexJSONPaths: false,
     buildSiteMap: true,
   );
 }
