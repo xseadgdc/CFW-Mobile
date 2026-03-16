@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/xseadgdc/CFW-Mobile.git"
   },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "@tailwindcss/typography": "^0.5.10"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
