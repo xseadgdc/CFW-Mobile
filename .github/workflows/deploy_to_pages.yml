@@ -24,6 +24,7 @@ jobs:
           npm install -D tailwindcss @tailwindcss/typography
           echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
           dart pub get 
+          npx --package tailwindcss --package @tailwindcss/typography \
           tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           cat /home/runner/.npm/_logs/*.log
           dart run master.dart build & 
