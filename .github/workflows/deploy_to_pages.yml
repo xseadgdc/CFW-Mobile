@@ -18,19 +18,22 @@ jobs:
         uses: dart-lang/setup-dart@v1
         
       - name: Install and Build
+      - name: Install and Build
         run: |
           rm -rf ./output ./build
           echo "@tailwind base; @tailwind components; @tailwind utilities;" > ./input.css
-          npm install tailwindcss @tailwindcss/typography
+          npm install -g tailwindcss @tailwindcss/typography
+          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
           dart pub get
           dart run master.dart build &
           timeout=120
           while [ ! -f ./output/index.html ] && [ $timeout -gt 0 ]; do
-            echo "Waiting for index.html... ($timeout seconds remaining)"
+            echo "Waiting for index.html... ($timeout seconds left)"
             sleep 5
             ((timeout-=5))
           done
           kill $(jobs -p) || true
+          echo "Final folder structure:"
           ls -R output
           
       - name: Deploy
