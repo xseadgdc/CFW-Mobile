@@ -1,0 +1,24 @@
+{
+  "name": "cfw-mobile",
+  "version": "1.0.0",
+  "description": "<img src=\"https://twemoji.maxcdn.com/v/latest/72x72/1f3d7.png\" width=\"128\" height=\"128\" />",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xseadgdc/CFW-Mobile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xseadgdc/CFW-Mobile/issues"
+  },
+  "homepage": "https://github.com/xseadgdc/CFW-Mobile#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^4.2.1"
+  }
+}
