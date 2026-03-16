@@ -20,6 +20,7 @@ jobs:
       - name: Install and Build
         run: |
           rm -rf ./build/output
+          echo "@tailwind base; @tailwind components; @tailwind utilities;" > ./input.css
           mkdir -p ./build/output/style
           npm install -D tailwindcss @tailwindcss/cli @tailwindcss/typography
           npx @tailwindcss/cli -i ./input.css -o ./build/output/style/tailwind.css --minify
