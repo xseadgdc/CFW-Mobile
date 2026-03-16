@@ -27,6 +27,9 @@ jobs:
 
       - name: Build Site
         run: |
+          mkdir -p ./build/output/style
+          npx tailwindcss init
+          npx tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           dart run master.dart build & 
           sleep 120 && kill $(jobs -p) || true
           echo "Checking Project Root:"
@@ -38,5 +41,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-#         publish_dir: ./build/output 
-          publish_dir: ./output 
+          publish_dir: ./build/output 
+#         publish_dir: ./output 
