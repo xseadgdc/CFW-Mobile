@@ -28,7 +28,7 @@ jobs:
       - name: Build Site
         run: |
           mkdir -p ./build/output/style
-          npx tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
+          ./node_modules/.bin/tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           dart run master.dart build & 
           sleep 120 && kill $(jobs -p) || true
           echo "Checking Project Root:"
