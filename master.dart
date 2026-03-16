@@ -20,7 +20,7 @@ void main() async {
     await Website(
       listOfHtml: [
         PageBase(
-          path: "/index.html",
+          path: "./index.html",
           title: "CFW Mobile",
           listOfWidgets: [
             Article(
@@ -61,7 +61,7 @@ void main() async {
         PostPage(text: await getPostContent(postName: "play_protect_certification_fix"), title: "This device isn't Play Protect certified - easy fix for Android 14 and older", path: "/posts/play_protect_certification_fix", image: "https://customrombay.org/post-images/play_protect_certification_fix_1.webp").toHtmlDoc(),
         PostPage(text: await getPostContent(postName: "2024_phone_buying_guide"), title: "The Ultimate Guide To Choosing Phones for Custom ROMs [Early 2024 Edition]", path: "/posts/2024_phone_buying_guide", image: "https://customrombay.org/post-images/2024_phone_buying_guide_1.webp").toHtmlDoc(),
       ] + await renderDevicePages(),
-      baseUrl: "https://xseadgdc.github.io/CFW-Mobile",
+      baseUrl: "https://xseadgdc.github.io/CFW-Mobile/",
     ),
     customConfigPath: "tailwind.config.js",
     buildIndexJSON: true,
