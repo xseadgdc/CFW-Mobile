@@ -30,7 +30,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: ./build/output
 
       - name: Check Output
         run: ls -R && echo "The deployment completed successfully."
