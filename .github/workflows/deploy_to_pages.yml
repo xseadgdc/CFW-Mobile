@@ -23,12 +23,8 @@ jobs:
       - name: Get Dart Dependencies
         run: dart pub get
 
-#     - name: Build Site
-#       # Runs build in background, waits 30s, then kills it so the job can finish
-#       run: dart run master.dart build & sleep 30 && kill $! || true
-
       - name: Build Site
-        run: dart run master.dart --build
+        run: dart run master.dart --build & sleep 30 && kill $! || true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
