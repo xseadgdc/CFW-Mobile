@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Site
         run: |
-          npx tailwindcss init -p || true
+          ./node_modules/.bin/tailwindcss init -p || true
           dart run master.dart build & sleep 120 && kill $(jobs -p) || true
           ls -R build/output
 
