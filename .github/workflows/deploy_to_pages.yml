@@ -21,8 +21,7 @@ jobs:
         run: |
           rm -rf ./output ./build
           echo "@tailwind base; @tailwind components; @tailwind utilities;" > ./input.css
-          npm install -g tailwindcss @tailwindcss/typography
-          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
+          npm install tailwindcss @tailwindcss/typography
           dart pub get
           dart run master.dart build &
           timeout=120
