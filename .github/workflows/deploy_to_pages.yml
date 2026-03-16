@@ -23,7 +23,7 @@ jobs:
           mkdir -p ./build/output/style
           npm install -D tailwindcss @tailwindcss/typography
           dart pub get 
-          ./node_modules/.bin/tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
+          npx tailwindcss -i ./input.css -o ./build/output/style/tailwind.css --minify
           dart run master.dart build & 
           sleep 120
           kill $(jobs -p) || true
