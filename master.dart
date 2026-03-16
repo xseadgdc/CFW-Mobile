@@ -20,7 +20,7 @@ void main() async {
     await Website(
       listOfHtml: [
         PageBase(
-          path: "index.html",
+          path: "./index.html",
           title: "CFW Mobile",
           listOfWidgets: [
             Article(
