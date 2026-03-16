@@ -1,15 +1,16 @@
-<p align="center">
-  <img src="static/banner.webp" />
-</p>
+<img src="https://twemoji.maxcdn.com/v/latest/72x72/1f3d7.png" width="128" height="128" />   
 
-### A place to find all custom ROMs available for your device.
+### CFW Mobile - A place to find all custom ROMs available for your device.
 Our goal is to support as many custom ROMs and devices as possible and provide quality information about them.
 
 ### Contributing
-If you want to help the community grow, visit [Contributing Page](https://customrombay.org/contributing) and add information about your ROM or device.
+If you want to help the community grow, visit [Contributing Page](https://github.com/xseadgdc/CFW-Mobile?tab=contributing-ov-file) and add information about your ROM or device.
 
 ### Technologies
-This website was built using [Staurolite](https://github.com/PiotrZPL/staurolite) and [Dart](https://dart.dev/). Our code is [hosted on GitHub](https://github.com/Customrombay/customrombay.org) and licensed under the [MPL-2.0 license](https://www.mozilla.org/en-US/MPL/2.0/). Except where otherwise noted, content on this site is licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+This website was built using [Staurolite](https://github.com/PiotrZPL/staurolite) and [Dart](https://dart.dev/). Our code is [hosted on GitHub](https://github.com/xseadgdc/CFW-Mobile/) and licensed under the [MPL-2.0 license](https://www.mozilla.org/en-US/MPL/2.0/). Except where otherwise noted, content on this site is licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
+### Acknowledgements
+If it is not clear enough, this is a customized fork of the [customrombay.org](https://customrombay.org/) website. Huge props to [Piotr Lange](https://github.com/PiotrZPL) and all of the CustomRomBay contributors for their hard work and my inspiration.
 
 ### Disclaimer
-Flashing custom ROMs might be dangerous for your device and should be performed only by people who know what they do. Authors and contributors of [customrombay.org](https://customrombay.org/) are not responsible in any way for any damages or data loss.
+Flashing custom ROMs can have the potential to brick your device and should be performed only by people with knowledge of what they are doing. Authors and contributors of [customrombay.org](https://customrombay.org/) or [CFW Mobile](https://github.com/xseadgdc/CFW-Mobile/) are not responsible in any way for any damages or data loss.
