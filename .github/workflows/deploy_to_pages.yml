@@ -26,7 +26,7 @@ jobs:
       - name: Build Site
         run: |
           dart run master.dart --build & sleep 30 && kill $! || true 
-          cp -r build/* build/output/ || true 
+          cp -r build/*.* build/output/ || true 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
